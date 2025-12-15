@@ -1,0 +1,63 @@
+<!-- Sticky Header -->
+<header class="sticky-header fixed top-0 left-0 right-0 z-50 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 flex-row-reverse">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div
+          routerLink="/"
+          class="text-2xl text-blue-600 font-bold gradient-bg bg-clip-text cursor-pointer"
+          (click)="scrollToSection('home')"
+        >
+          <span id="logo-text">WebServices</span>
+          <i class="fas fa-code ml-2"></i>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" dir="rtl">
+        <!-- [class.active]="activeSection === 'home'" -->
+        <a
+          routerLink="/"
+          (click)="scrollToSection('home')"
+          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition mx-8"
+          >القائمة الرئيسية</a
+        >
+        <a
+          routerLink="/"
+          (click)="scrollToSection('services')"
+          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition"
+          >خدماتنا</a
+        >
+        <a
+          routerLink="/"
+          (click)="scrollToSection('why-choose-me')"
+          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition"
+          >لماذا تختارنا</a
+        >
+        <a
+          routerLink="/"
+          (click)="scrollToSection('contact')"
+          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition"
+          >تواصل معنا</a
+        >
+      </nav>
+      <!-- Controls -->
+      <div class="flex items-center space-x-4">
+        <!-- Language Toggle -->
+        <!-- <button
+          id="lang-toggle"
+          class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm font-medium hover:bg-gray-100 transition"
+        >
+          EN
+        </button> -->
+        <!-- Dark Mode Toggle -->
+        <!-- <button
+          id="theme-toggle"
+          class="p-2 rounded-lg hover:bg-gray-100 transition"
+        >
+          <i class="fas fa-moon text-lg"></i>
+        </button> -->
+      </div>
+    </div>
+  </div>
+</header>

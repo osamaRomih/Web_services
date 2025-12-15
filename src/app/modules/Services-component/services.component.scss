@@ -1,0 +1,156 @@
+/* Card */
+.service-card {
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+// .service-card::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background: linear-gradient(120deg, rgba(99, 102, 241, 0.15), transparent);
+//   opacity: 0;
+//   transition: opacity 0.4s ease;
+// }
+
+// .service-card:hover::before {
+//   opacity: 1;
+// }
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.25);
+}
+
+/* Image hover */
+.service-card img {
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Button */
+// .service-btn {
+//   background: linear-gradient(135deg, #2563eb, #4f46e5);
+//   color: #fff;
+//   transition: all 0.3s ease;
+// }
+
+// .service-btn:hover {
+//   background: linear-gradient(135deg, #1d4ed8, #4338ca);
+//   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+//   transform: translateY(-2px);
+// }
+
+/* Stars */
+.rating-stars {
+  color: #facc15;
+  letter-spacing: 2px;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal */
+.modal-card {
+  border-radius: 1.5rem;
+  animation: scaleIn 0.4s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.service-card {
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.25);
+}
+
+.service-card img {
+  transition: transform 0.5s ease;
+}
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+// .service-btn {
+//   background: linear-gradient(135deg, #2563eb, #4f46e5);
+//   color: #fff;
+//   transition: all 0.3s ease;
+// }
+// .service-btn:hover {
+//   background: linear-gradient(135deg, #1d4ed8, #4338ca);
+//   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+//   transform: translateY(-2px);
+// }
+
+.rating-stars {
+  color: #facc15;
+  letter-spacing: 2px;
+}
+
+.fade-in {
+  animation: fadeUp 0.8s ease forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-card {
+  border-radius: 1.5rem;
+  animation: scaleIn 0.4s ease;
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

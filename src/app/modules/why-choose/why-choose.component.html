@@ -1,0 +1,27 @@
+<section id="why-choose-me" class="py-20 px-4 bg-gray-50">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-fadeIn">
+      لماذا تختارني؟
+    </h2>
+    <p class="text-lg text-gray-600 mb-12 animate-fadeIn delay-150">
+      خدمة احترافية مع اهتمام بالتفاصيل
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" dir="rtl">
+      <div
+        *ngFor="let feature of features"
+        class="feature-card p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-2 animate-fadeIn"
+        [style.animationDelay]="feature.delay + 'ms'"
+      >
+        <div
+          class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+          [ngStyle]="{ 'background-color': feature.bgColor }"
+        >
+          <i class="{{ feature.icon }} text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">{{ feature.title }}</h3>
+        <p class="text-gray-600 text-sm">{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

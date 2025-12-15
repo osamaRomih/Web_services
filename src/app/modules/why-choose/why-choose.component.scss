@@ -1,0 +1,60 @@
+/* Keyframes للظهور تدريجياً مع حركة للأعلى */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تطبيق الانيميشن على الكارد */
+.animate-fadeIn {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* تأخيرات مختلفة للانيميشن */
+.animate-fadeIn.delay-150 {
+  animation-delay: 0.15s;
+}
+.animate-fadeIn.delay-200 {
+  animation-delay: 0.2s;
+}
+.animate-fadeIn.delay-300 {
+  animation-delay: 0.3s;
+}
+.animate-fadeIn.delay-400 {
+  animation-delay: 0.4s;
+}
+.animate-fadeIn.delay-500 {
+  animation-delay: 0.5s;
+}
+.animate-fadeIn.delay-600 {
+  animation-delay: 0.6s;
+}
+.animate-fadeIn.delay-700 {
+  animation-delay: 0.7s;
+}
+
+/* استايل الكارد */
+.feature-card {
+  @apply p-6 bg-white rounded-2xl shadow-md border border-gray-100 transition-transform transition-shadow duration-300 ease-in-out;
+}
+
+.feature-card:hover {
+  @apply -translate-y-2 shadow-xl;
+}
+
+/* أيقونات الكارد */
+.feature-card i {
+  @apply text-white text-2xl;
+}
+
+/* الدائرة الخلفية للأيقونة */
+.feature-card .w-16.h-16 {
+  @apply rounded-full flex items-center justify-center mx-auto mb-4;
+  background: #0084ff;
+  background: linear-gradient(135deg, #0084ff, #00b0ff);
+}

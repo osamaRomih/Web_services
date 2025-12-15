@@ -1,0 +1,154 @@
+:root {
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+  --accent: #ec4899;
+  --bg-light: #ffffff;
+  --bg-dark: #0f172a;
+  --card-light: #f8fafc;
+  --card-dark: #1e293b;
+  --text-light: #1e293b;
+  --text-dark: #f1f5f9;
+}
+
+.light-mode {
+  --bg: var(--bg-light);
+  --card: var(--card-light);
+  --text: var(--text-light);
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+}
+
+.dark-mode {
+  --bg: var(--bg-dark);
+  --card: var(--card-dark);
+  --text: var(--text-dark);
+  --text-secondary: #94a3b8;
+  --border: #334155;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.glass-card {
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.sticky-header {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .sticky-header {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.floating-btn {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  bottom: 110px;
+  right: 30px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+}
+
+.messenger-btn {
+  background: #0084ff;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 0 4px 20px rgba(0, 132, 255, 0.4);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8);
+  }
+}
+
+/* Pulse for Messenger */
+.messenger-btn {
+  animation: pulse-blue 2s ease-in-out infinite;
+}
+
+@keyframes pulse-blue {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(0, 132, 255, 0.4); /* أزرق مسنجر */
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(0, 132, 255, 0.8);
+  }
+}
+.fade-in {
+  /* opacity: 0; */
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card {
+  cursor: pointer;
+}
+
+.rating-stars {
+  color: #fbbf24;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.hero-illustration {
+  animation: float 6s ease-in-out infinite;
+}
