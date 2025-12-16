@@ -30,7 +30,7 @@ export class ServicesDataService {
       ],
       extras: [
         { name: 'صفحة إضافية', price: 199 },
-        { name: 'تصميم مخصص للقوائم', price: 500 },
+        { name: 'تصميم مخصص للقوائم', price: 499 },
         { name: 'دعم 24 ساعة', price: 399 },
         { name: 'ميزة SEO إضافية', price: 299 },
       ],
@@ -61,7 +61,7 @@ export class ServicesDataService {
         'زيادة المبيعات والتفاعل',
       ],
       extras: [
-        { name: 'نظام طلب أونلاين', price: 700 },
+        { name: 'نظام طلب أونلاين', price: 599 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
         { name: 'تصميم مخصص للعروض', price: 499 },
@@ -94,7 +94,7 @@ export class ServicesDataService {
         'زيادة المبيعات والتفاعل',
       ],
       extras: [
-        { name: 'تصميم مخصص للقوائم', price: 500 },
+        { name: 'تصميم مخصص للقوائم', price: 499 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
         { name: 'ميزة SEO إضافية', price: 299 },
@@ -126,7 +126,7 @@ export class ServicesDataService {
         'زيادة الاطلاع والمبيعات',
       ],
       extras: [
-        { name: 'صفحات إضافية', price: 400 },
+        { name: 'صفحات إضافية', price: 499 },
         { name: 'تصميم مخصص للملف الشخصي', price: 499 },
         { name: 'دعم 24 ساعة', price: 299 },
       ],
@@ -158,7 +158,7 @@ export class ServicesDataService {
         'زيادة المبيعات',
       ],
       extras: [
-        { name: 'صفحات إضافية', price: 600 },
+        { name: 'صفحات إضافية', price: 599 },
         { name: 'تصميم مخصص للشركة', price: 499 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
@@ -189,7 +189,7 @@ export class ServicesDataService {
         'دعم فني سريع 24/7',
       ],
       extras: [
-        { name: 'تقارير متقدمة', price: 1000 },
+        { name: 'تقارير متقدمة', price: 1900 },
         { name: 'صفحات إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
@@ -220,7 +220,7 @@ export class ServicesDataService {
         'زيادة الاطلاع والتفاعل',
       ],
       extras: [
-        { name: 'تصميم مخصص للبورتفوليو', price: 400 },
+        { name: 'تصميم مخصص للبورتفوليو', price: 399 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 299 },
       ],
@@ -283,7 +283,7 @@ export class ServicesDataService {
         'دعم فني سريع 24/7',
       ],
       extras: [
-        { name: 'بوابة مرضى', price: 1200 },
+        { name: 'بوابة مرضى', price: 1199 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
@@ -314,7 +314,7 @@ export class ServicesDataService {
         'دعم فني سريع 24/7',
       ],
       extras: [
-        { name: 'تطبيق موبايل', price: 2000 },
+        { name: 'تطبيق موبايل', price: 1999 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
@@ -346,8 +346,8 @@ export class ServicesDataService {
         'دعم فني سريع 24/7',
       ],
       extras: [
-        { name: 'بوابة المرضى', price: 1500 },
-        { name: 'نظام صيدلية', price: 1200 },
+        { name: 'بوابة المرضى', price: 1499 },
+        { name: 'نظام صيدلية', price: 1199 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
@@ -378,8 +378,8 @@ export class ServicesDataService {
         'دعم فني سريع 24/7',
       ],
       extras: [
-        { name: 'ربط كاشير POS', price: 1000 },
-        { name: 'تطبيق طلبات للزبائن', price: 2000 },
+        { name: 'ربط كاشير POS', price: 999 },
+        { name: 'تطبيق طلبات للزبائن', price: 1999 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
@@ -411,7 +411,7 @@ export class ServicesDataService {
         'دعم فني سريع 24/7',
       ],
       extras: [
-        { name: 'تطبيق طلبات للزبائن', price: 2000 },
+        { name: 'تطبيق طلبات للزبائن', price: 1999 },
         { name: 'صفحة إضافية', price: 199 },
         { name: 'دعم 24 ساعة', price: 399 },
       ],
