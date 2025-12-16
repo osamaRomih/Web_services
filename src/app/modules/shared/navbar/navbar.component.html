@@ -1,63 +1,98 @@
 <!-- Sticky Header -->
-<header class="sticky-header fixed top-0 left-0 right-0 z-50 bg-white">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm" dir="rtl">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16 flex-row-reverse">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <div
-          routerLink="/"
-          class="text-2xl text-blue-600 font-bold gradient-bg bg-clip-text cursor-pointer"
-          (click)="scrollToSection('home')"
-        >
-          <span id="logo-text">WebServices</span>
-          <i class="fas fa-code ml-2"></i>
-        </div>
+    <div class="flex items-center h-16 justify-between">
+      <!-- Right: Logo -->
+      <div
+        routerLink="/"
+        (click)="scrollToSection('home')"
+        class="flex items-center gap-2 text-2xl font-bold text-blue-600 cursor-pointer"
+      >
+        <span>WebServices</span>
+        <i class="fas fa-code"></i>
       </div>
-      <!-- Navigation -->
-      <nav class="hidden md:flex space-x-8" dir="rtl">
-        <!-- [class.active]="activeSection === 'home'" -->
+
+      <!-- Center: Desktop Navigation -->
+      <nav class="hidden md:flex gap-8 text-lg font-medium mx-auto">
         <a
           routerLink="/"
           (click)="scrollToSection('home')"
-          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition mx-8"
-          >القائمة الرئيسية</a
+          class="hover:text-blue-600 transition"
+          >الرئيسية</a
         >
         <a
           routerLink="/"
           (click)="scrollToSection('services')"
-          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition"
+          class="hover:text-blue-600 transition"
           >خدماتنا</a
         >
         <a
           routerLink="/"
           (click)="scrollToSection('why-choose-me')"
-          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition"
+          class="hover:text-blue-600 transition"
           >لماذا تختارنا</a
         >
         <a
           routerLink="/"
           (click)="scrollToSection('contact')"
-          class="text-xl cursor-pointer font-medium hover:text-blue-600 transition"
+          class="hover:text-blue-600 transition"
           >تواصل معنا</a
         >
       </nav>
-      <!-- Controls -->
-      <div class="flex items-center space-x-4">
-        <!-- Language Toggle -->
+
+      <!-- Left: Controls (Language + Dark Mode) -->
+      <div class="flex items-center gap-4">
         <!-- <button
           id="lang-toggle"
           class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm font-medium hover:bg-gray-100 transition"
         >
           EN
-        </button> -->
-        <!-- Dark Mode Toggle -->
-        <!-- <button
+        </button>
+        <button
           id="theme-toggle"
           class="p-2 rounded-lg hover:bg-gray-100 transition"
         >
           <i class="fas fa-moon text-lg"></i>
         </button> -->
+
+        <!-- Mobile Button -->
+        <button
+          (click)="isMenuOpen = !isMenuOpen"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+        >
+          <i class="fas" [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+        </button>
       </div>
     </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div *ngIf="isMenuOpen" class="md:hidden bg-white border-t shadow-lg">
+    <nav class="flex flex-col text-base font-medium">
+      <a
+        routerLink="/"
+        (click)="scrollToSection('home'); isMenuOpen = false"
+        class="px-6 py-4 hover:bg-gray-50"
+        >الرئيسية</a
+      >
+      <a
+        routerLink="/"
+        (click)="scrollToSection('services'); isMenuOpen = false"
+        class="px-6 py-4 hover:bg-gray-50"
+        >خدماتنا</a
+      >
+      <a
+        routerLink="/"
+        (click)="scrollToSection('why-choose-me'); isMenuOpen = false"
+        class="px-6 py-4 hover:bg-gray-50"
+        >لماذا تختارنا</a
+      >
+      <a
+        routerLink="/"
+        (click)="scrollToSection('contact'); isMenuOpen = false"
+        class="px-6 py-4 hover:bg-gray-50"
+        >تواصل معنا</a
+      >
+    </nav>
   </div>
 </header>

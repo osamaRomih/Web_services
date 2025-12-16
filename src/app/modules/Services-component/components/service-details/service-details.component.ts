@@ -1,22 +1,30 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ServicesDataService } from '../../../core/services/services-data.service';
+import { CommonModule } from '@angular/common';
+import { Service } from '../../../core/model/service';
 
 @Component({
   selector: 'app-service-details',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './service-details.component.html',
   styleUrl: './service-details.component.scss',
 })
 export class ServiceDetailsComponent {
-  serviceId!: number;
+  service!: Service;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private servicesSrv: ServicesDataService
+  ) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params) => {
-      this.serviceId = Number(params.get('id'));
-      console.log(this.serviceId);
-    });
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const data = this.servicesSrv.getById(id);
+
+    if (data) {
+      this.service = data;
+    }
   }
 }

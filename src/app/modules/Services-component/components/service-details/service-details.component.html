@@ -1,1 +1,202 @@
-<p>service-details works!</p>
+<section
+  dir="rtl"
+  *ngIf="service"
+  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16"
+>
+  <!-- ===== Header ===== -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-14 items-center">
+    <!-- Image -->
+    <div class="w-full">
+      <img
+        [src]="service.thumbnail"
+        class="w-full h-64 sm:h-80 object-cover rounded-2xl shadow"
+        alt="{{ service.name }}"
+      />
+    </div>
+
+    <!-- Content -->
+    <div>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-4">
+        {{ service.name }}
+      </h1>
+
+      <p class="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
+        {{ service.description }}
+      </p>
+
+      <div class="text-2xl sm:text-3xl font-bold text-[#2563eb] mb-6">
+        <span class="text-gray-500 text-base sm:text-lg font-medium">
+          يبدأ من
+        </span>
+        {{ service.price | number : "1.0-0" }} ج.م
+      </div>
+
+      <a
+        href="https://wa.me/20192225678?text=مرحباً،%20أرغب%20في%20تنفيذ%20هذه%20الخدمة"
+        target="_blank"
+        class="inline-block w-full sm:w-auto text-center bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl transition"
+      >
+        اطلب الخدمة الآن
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== Full Description ===== -->
+  <div class="mb-14 max-w-4xl">
+    <h2 class="text-xl sm:text-2xl font-bold mb-4">تفاصيل الخدمة</h2>
+    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+      {{ service.fullDescription }}
+    </p>
+  </div>
+
+  <!-- ===== Deliverables ===== -->
+  <div class="mb-14">
+    <h2 class="text-xl sm:text-2xl font-bold mb-6">ماذا ستحصل عليه</h2>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <li
+        *ngFor="let item of service.deliverables"
+        class="flex items-start gap-3 bg-gray-50 p-4 rounded-xl"
+      >
+        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+        <span class="text-sm sm:text-base">{{ item }}</span>
+      </li>
+    </ul>
+  </div>
+  <!-- ===== Gallery ===== -->
+  <div class="mb-14">
+    <h2 class="text-xl sm:text-2xl font-bold mb-6">معرض الأعمال</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <img
+        *ngFor="
+          let img of service.gallery || [
+            service.thumbnail,
+            service.thumbnail,
+            service.thumbnail,
+            service.thumbnail
+          ]
+        "
+        [src]="img"
+        alt="Service Gallery"
+        class="w-full h-32 sm:h-40 object-cover rounded-xl shadow hover:scale-105 transition cursor-pointer"
+      />
+    </div>
+  </div>
+
+  <!-- ===== Extras (Optional) ===== -->
+  <div *ngIf="service.extras.length" class="mb-14">
+    <h2 class="text-xl sm:text-2xl font-bold mb-6">إضافات اختيارية</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div
+        *ngFor="let extra of service.extras"
+        class="flex justify-between items-center border rounded-xl p-4"
+      >
+        <span class="text-sm sm:text-base">{{ extra.name }}</span>
+        <span class="font-bold text-[#0084ff]">
+          + {{ extra.price | number : "1.0-0" }} ج.م
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Why Choose Us ===== -->
+  <div class="mb-14 bg-indigo-50 rounded-2xl p-6 sm:p-8">
+    <h2 class="text-xl sm:text-2xl font-bold mb-4">مميزات الخدمة</h2>
+
+    <ul class="space-y-3 text-gray-700 text-sm sm:text-base">
+      <li>✔️ أسعار تنافسية تناسب جميع الميزانيات</li>
+      <li>✔️ تصميم احترافي يزيد من المبيعات والظهور</li>
+      <li>✔️ متوافق مع جميع الشاشات والأجهزة</li>
+      <li>✔️ خرائط جوجل ووسائل تواصل سهلة</li>
+      <li>✔️ حماية الموقع وتأمين البيانات</li>
+      <li>✔️ دعم فني متواصل 24/7</li>
+      <li>✔️ زيادة المبيعات والتفاعل مع العملاء</li>
+    </ul>
+  </div>
+
+  <!-- ===== Reviews ===== -->
+  <div class="mb-14">
+    <h2 class="text-xl sm:text-2xl font-bold mb-6">آراء العملاء</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Review Card -->
+      <div class="bg-white rounded-2xl shadow p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <div
+            class="w-10 h-10 rounded-full bg-[#2563eb] text-white flex items-center justify-center font-bold"
+          >
+            أ
+          </div>
+          <div>
+            <p class="font-semibold text-sm">أحمد محمد</p>
+            <div class="text-yellow-400 text-xs">★★★★★</div>
+          </div>
+        </div>
+
+        <p class="text-gray-600 text-sm leading-relaxed">
+          خدمة ممتازة جدًا، تصميم احترافي والتواصل كان سريع وواضح. أنصح بالتعامل
+          بشدة.
+        </p>
+      </div>
+
+      <!-- Review Card -->
+      <div class="bg-white rounded-2xl shadow p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <div
+            class="w-10 h-10 rounded-full bg-[#0084ff] text-white flex items-center justify-center font-bold"
+          >
+            م
+          </div>
+          <div>
+            <p class="font-semibold text-sm">محمد علي</p>
+            <div class="text-yellow-400 text-xs">★★★★★</div>
+          </div>
+        </div>
+
+        <p class="text-gray-600 text-sm leading-relaxed">
+          الموقع زاد من عدد العملاء بشكل واضح، شغل احترافي وسعر مناسب جدًا.
+        </p>
+      </div>
+
+      <!-- Review Card -->
+      <div class="bg-white rounded-2xl shadow p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <div
+            class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center font-bold"
+          >
+            س
+          </div>
+          <div>
+            <p class="font-semibold text-sm">سارة حسن</p>
+            <div class="text-yellow-400 text-xs">★★★★★</div>
+          </div>
+        </div>
+
+        <p class="text-gray-600 text-sm leading-relaxed">
+          تجربة ممتازة من البداية للنهاية، التزام في المواعيد ودعم بعد التسليم.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA Bottom ===== -->
+  <div
+    class="text-center bg-gradient-to-r from-[#0084ff] to-blue-600 text-white rounded-2xl p-8"
+  >
+    <h3 class="text-xl sm:text-2xl font-bold mb-4">جاهز تبدأ مشروعك؟</h3>
+
+    <p class="mb-6 text-sm sm:text-base opacity-90">
+      تواصل معنا الآن واحصل على موقع أو نظام احترافي بسعر مناسب
+    </p>
+
+    <a
+      href="https://wa.me/201092225678?text=مرحباً،%20أرغب%20في%20عمل%20مشروع%20ويب%20معكم%20وأريد%20معرفة%20التفاصيل."
+      target="_blank"
+      class="inline-block bg-green-500 hover:bg-green-600 px-10 py-3 rounded-xl font-medium transition"
+    >
+      تواصل معنا الآن
+    </a>
+  </div>
+</section>

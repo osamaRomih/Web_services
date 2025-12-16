@@ -40,9 +40,11 @@
 
         <div class="flex justify-between mb-4 text-sm text-gray-500">
           <span class="rating-stars">★★★★★</span>
-          <span class="text-[#0084ff] font-bold text-lg"
-            >ج.م {{ service.price }}</span
-          >
+          <span class="text-[#0084ff] font-bold text-lg">
+            <span class="text-gray-500 text-base sm:text-lg font-medium">
+              يبدأ من </span
+            >{{ service.price | number : "1.0-0" }} ج.م
+          </span>
         </div>
 
         <button

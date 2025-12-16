@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Feature } from '../core/model/feature';
 
 @Component({
   selector: 'app-why-choose',
@@ -63,11 +64,4 @@ export class WhyChooseComponent {
       bgColor: '#0084ff',
     },
   ];
-}
-interface Feature {
-  icon: string;
-  title: string;
-  description: string;
-  delay: number;
-  bgColor?: string;
 }
